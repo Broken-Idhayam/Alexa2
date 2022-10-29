@@ -385,16 +385,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check PM, I have sent files in pm', show_alert=True)
+                await query.answer('𝙲𝙷𝙴𝙲𝙺 𝙿𝙼, 𝙸 𝙷𝙰𝚅𝙴 𝚂𝙴𝙽𝙳𝙴𝙳 𝚃𝙷𝙴 𝙵𝙸𝙻𝙴𝚂 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙿𝙼 📸', show_alert=True)
         except UserIsBlocked:
-            await query.answer('You Are Blocked to use me !', show_alert=True)
+            await query.answer('𝚈𝙾𝚄 𝙰𝚁𝙴 𝙱𝙻𝙾𝙲𝙺𝙴𝙳 𝚃𝙷𝙴 𝙱𝙾𝚃, 𝚄𝙽𝙻𝙾𝙲𝙺 𝙼𝙴 𝚃𝙾 𝚄𝚂𝙴 ❣️', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay 😒", show_alert=True)
+            await query.answer("𝙸 𝙻𝙸𝙺𝙴 𝚈𝙾𝚄𝚁 𝚂𝙼𝙰𝚁𝚃𝙽𝙴𝚂𝚂,𝙱𝚄𝚃 𝙳𝙾𝙽'𝚃 𝙱𝙴 𝙾𝚅𝙴𝚁𝚂𝙼𝙰𝚁𝚃 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -425,13 +425,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/channel/UCqts9WhhlioK3RB9XQQzoAg'),
-            InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='{script.HOME_BUTTONURL_UPDATES')
-        ], [
-            InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
-            InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
+          InlineKeyboardButton('✰ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ✰', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+            InlineKeyboardButton('📣 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 ☕', url='https://t.me/Vk_Botz'),
+            InlineKeyboardButton('⚠️ 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🎬', url='https://t.me/VK_LINKZ')
+            ],[
+            InlineKeyboardButton('😥 𝙷𝙴𝙻𝙿 💌', callback_data='help'),
+            InlineKeyboardButton('🥂 𝙰𝙱𝙾𝚄𝚃 ❣️', callback_data='about')
+            ],[
+            InlineKeyboardButton('🔎 𝚂𝙴𝙰𝚁𝙲𝙷 𝙷𝙴𝚁𝙴 🎌', switch_inline_query_current_chat='')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
