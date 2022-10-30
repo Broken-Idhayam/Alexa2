@@ -48,7 +48,7 @@ CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<code>{file_name}</c
 
 <b>🌟 𝙿𝙾𝚆𝙴𝚁𝙴𝙳 𝙱𝚈 : @Vk_Botz</b>"""")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"""<b>🎞 𝚃𝙸𝚃𝚃𝙻𝙴</b>: <a href={url}>{title}</a>
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", """<b>🎞 𝚃𝙸𝚃𝚃𝙻𝙴</b>: <a href={url}>{title}</a>
 <b>🎭 𝙶𝙴𝙽𝚁𝙴𝚂</b>: {genres}
 <b>📆 𝚈𝙴𝙰𝚁</b>: <a href={url}/releaseinfo>{year}</a>
 <b>🌟 𝚁𝙰𝚃𝙸𝙽𝙶</b>: <a href={url}/ratings>{rating}</a> / 10 (based on {votes} user ratings.)
